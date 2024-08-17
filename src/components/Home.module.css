@@ -1,0 +1,228 @@
+/* Home.module.css */
+body {
+  margin: 0; /* Remove default margin */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container styling */
+
+.maindiv {
+  background-image: url("../../public/student_studying.jpeg");
+  background-size: cover; /* Ensure the image covers the entire element */
+  background-position: center top; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating of the image */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Remove padding to avoid overflow */
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden; /* Prevent content overflow */
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+/* Initial text styling */
+.text {
+  color: #ffeb3b; /* Bright yellow for high contrast */
+  font-family: "Lora", serif; /* Elegant and readable font */
+  font-size: 2rem; /* Large font size for visibility */
+  font-weight: bold; /* Bold for emphasis */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better readability */
+  text-align: center; /* Center alignment */
+  max-width: 80%; /* Limits width to avoid overflow */
+  position: absolute;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
+}
+
+.fadeOut {
+  opacity: 0; /* Make the text invisible */
+  transform: translateY(-50px); /* Move text upwards */
+}
+
+/* Next text styling */
+.nextText {
+  color: #ffeb3b; /* Bright yellow for high contrast */
+  font-family: "Lora", serif; /* Elegant and readable font */
+  font-size: 2rem; /* Large font size for visibility */
+  font-weight: bold; /* Bold for emphasis */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better readability */
+  text-align: center; /* Center alignment */
+  max-width: 80%; /* Limits width to avoid overflow */
+  position: absolute;
+  opacity: 0; /* Initially invisible */
+  transform: translateY(50px); /* Start from below */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
+}
+
+/* Show the next text */
+.show {
+  opacity: 1; /* Make the text visible */
+  transform: translateY(-50px); /* Move text to original position */
+}
+.showCourseContainer {
+  opacity: 1; /* Make the text visible */
+  transform: translateY(20px); /* Move text to original position */
+}
+.coursesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: -40px;
+  width: 100%; /* Full width */
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+  opacity: 0; /* Initially hidden */
+  cursor: pointer;
+}
+
+.coursesContainer.show {
+  opacity: 1; /* Show when scrolling */
+}
+
+.coursesContainer.showCourseContainer {
+  opacity: 1;
+}
+/* Home.module.css */
+
+/* Individual course card */
+.courseCard {
+  background: white; /* Card background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Card shadow */
+  width: 300px; /* Fixed width */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.courseCard img {
+  width: 100%; /* Full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure the image does not exceed the card width */
+  max-height: 200px; /* Limit the maximum height */
+  object-fit: cover; /* Ensure image covers the area without distortion */
+  border-radius: 8px; /* Match the card's rounded corners */
+  aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+  mix-blend-mode: multiply; /* Adjust blend mode to fit your design */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition effects */
+}
+.modalimage {
+  width: 100%; /* Full width of the modal */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure the image does not exceed the modal width */
+  max-height: 500px; /* Limit the maximum height */
+  object-fit: cover; /* Ensure the full image is visible without cropping */
+  border-radius: 8px; /* Rounded corners */
+  aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition effects */
+}
+
+/* Optionally, add hover effects to enhance interactivity */
+.courseCard img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  filter: brightness(90%); /* Slightly dim the image on hover */
+}
+
+.courseCard:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.courseCard h3 {
+  margin: 0;
+  font-size: 1.5rem; /* Heading font size */
+  color: #333; /* Heading color */
+}
+
+.courseCard p {
+  margin: 10px 0;
+  color: #666; /* Text color */
+}
+.courseContainerMobile {
+  display: none;
+}
+/* Home.module.css */
+
+.carouselHeading {
+  color: #ffeb3b; /* Bright yellow or any other color that fits your design */
+  font-family: "Lora", serif; /* Same font-family for consistency */
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: bold; /* Bold for emphasis */
+  text-align: center; /* Center alignment */
+  margin-bottom: 20px; /* Space between heading and carousel */
+}
+.arrowIcon {
+  font-size: 2rem; /* Increase the size of the icon */
+  color: #007bff; /* A primary color for the icon */
+  cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+  margin-top: 10px; /* Add some space between the description and the icon */
+}
+
+.arrowIcon:hover {
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+  color: #0056b3; /* Darken the color on hover */
+}
+
+.arrowIcon:active {
+  transform: scale(1.1); /* Keep a slightly enlarged state when clicked */
+  color: #003d80; /* Further darken the color when clicked */
+}
+
+.arrowIcon:focus {
+  outline: none; /* Remove the default outline when focused */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add a subtle shadow for focus */
+}
+
+/* Media query adjustments for smaller screens */
+@media (max-width: 768px) {
+  .maindiv {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .coursesContainer {
+    display: none;
+  }
+  .courseContainerMobile {
+    display: block;
+    position: absolute;
+    top: 550px;
+    cursor: pointer;
+  }
+  .text {
+    display: none;
+  }
+  .nextText {
+    display: block;
+    position: absolute;
+    top: 250px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .maindiv {
+    height: 150vh;
+  }
+  .coursesContainer {
+    display: none;
+  }
+  .courseContainerMobile {
+    display: block;
+    position: absolute;
+    top: 300px;
+    cursor: pointer;
+  }
+  .text {
+    display: none;
+  }
+  .nextText {
+    display: block;
+    position: absolute;
+    top: 100px;
+  }
+}

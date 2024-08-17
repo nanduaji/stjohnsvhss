@@ -1,0 +1,92 @@
+.aboutSection {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  background-color: #f6f6f6;
+}
+
+.aboutContent {
+  flex: 1;
+  padding: 20px;
+  max-width: 100%; /* Ensures full width */
+}
+
+.aboutTitle {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.aboutDescription {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.teamSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.teamMember {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  margin-bottom: 20px; /* Spacing between rows */
+}
+
+.teamImage {
+  width: 50%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.teamMember h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.teamMember p {
+  font-size: 16px;
+  color: #777;
+}
+
+.aboutImageContainer {
+  display: none; /* Hide the image */
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutContent {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .aboutContent {
+    max-width: 100%;
+  }
+
+  .aboutImageContainer {
+    display: none; /* Hide the image */
+  }
+
+  .teamSection {
+    flex-direction: column; /* Stack avatars in two rows */
+    align-items: center;
+  }
+
+  .teamMember {
+    flex: 0 0 45%; /* Adjust width to fit two avatars per row */
+    max-width: 45%; /* Ensure proper spacing */
+  }
+}

@@ -1,0 +1,122 @@
+.header {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+}
+
+.desktopMenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns menu items to the right */
+  padding: 10px 20px; /* Adds padding around the menu */
+}
+
+.desktopMenu li {
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 18px; /* Slightly increased font size */
+  font-weight: 500; /* Medium font weight */
+  color: #333; /* Darker color for regular items */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  position: relative; /* Allows for underline effect */
+}
+
+.desktopMenu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #007bff; /* Underline color */
+  transition: width 0.3s ease; /* Smooth underline animation */
+}
+
+.desktopMenu li:hover {
+  color: #007bff;
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.desktopMenu li:hover::after {
+  width: 100%; /* Underline expands on hover */
+}
+
+.desktopMenu li.activeItem {
+  color: blue;
+  font-weight: 600; /* Makes the active item bolder */
+}
+
+.desktopMenu li.activeItem::after {
+  width: 100%; /* Keeps underline on the active item */
+}
+
+.image {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #007bff; /* Change text color to white for better contrast */
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Slightly increased letter spacing */
+  line-height: 1.5;
+  padding: 10px 20px; /* Adjusted padding for better balance */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  cursor: pointer;
+}
+
+.text:hover {
+  transform: translateY(-3px); /* Subtle lift effect on hover */
+}
+
+.darkMode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #000000;
+  transition: color 0.3s;
+}
+
+.themeToggle:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.darkMode .themeToggle {
+  color: #ffffff;
+}
+
+.darkMode .themeToggle:hover {
+  color: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+  .menuIcon {
+    display: block;
+    margin-left: auto;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+}

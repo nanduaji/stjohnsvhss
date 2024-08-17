@@ -1,0 +1,87 @@
+.maindiv {
+  background-image: url("../../public/college.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Space between cards */
+}
+.heading {
+  font-size: 36px !important; /* Larger font size for prominence */
+  font-weight: bold !important; /* Bold text for emphasis */
+  color: #043048 !important; /* Dark blue color for the heading */
+  margin-bottom: 40px !important; /* Spacing between heading and cards */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important; /* Subtle shadow for better readability */
+  text-align: center !important; /* Center-align the heading text */
+}
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards horizontally */
+  gap: 50px; /* Space between cards */
+}
+
+.card {
+  max-width: 360px; /* Slightly larger card */
+  border-radius: 12px; /* More rounded corners */
+  overflow: hidden; /* Ensure content stays within rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: all 0.3s ease; /* Smooth transitions */
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight lift effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  border: 2px solid red;
+}
+
+.cardMedia {
+  width: 80px; /* Circular avatar */
+  height: 80px; /* Adjust height to match width */
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover; /* Ensure image covers the circular area without distortion */
+  border: 4px solid #fff; /* White border for contrast */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for avatar */
+  position: absolute;
+  top: 10px; /* Center the avatar at the top of the card */
+  left: calc(50% - 40px); /* Center horizontally */
+}
+
+.cardContent {
+  padding: 60px 16px 16px; /* Adjust padding to account for the avatar */
+}
+
+.cardTitle {
+  font-size: 20px; /* Modern font size */
+  font-weight: 600; /* Bold title */
+  margin-bottom: 8px; /* Spacing below title */
+}
+
+.cardSubtitle {
+  font-size: 16px; /* Slightly smaller than title */
+  color: #777; /* Lighter color for subtitle */
+  margin-bottom: 12px; /* Spacing below subtitle */
+}
+
+.cardExperience {
+  font-size: 14px; /* Smaller font size for experience */
+  color: #555; /* Slightly darker color */
+  margin-bottom: 12px; /* Spacing below experience */
+}
+
+.cardDescription {
+  font-size: 14px; /* Consistent font size */
+  color: #333; /* Darker color for better readability */
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: #f9f9f9; /* Light background for actions */
+}
